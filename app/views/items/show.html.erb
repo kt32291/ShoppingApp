@@ -20,5 +20,7 @@
   <%= @item.price %>
 </p>
 
+<%= link_to 'Add to Cart', new_selection_url(item_id: @item.id) %>
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>

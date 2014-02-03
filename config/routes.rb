@@ -1,4 +1,6 @@
 ShoppingApp::Application.routes.draw do
+  resources :selections
+
   devise_for :users
   resources :items
 
