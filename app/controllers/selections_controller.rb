@@ -1,10 +1,12 @@
 class SelectionsController < ApplicationController
   before_action :set_selection, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /selections
   # GET /selections.json
   def index
-    @selections = Selection.all
+    @user = current_user
+    @selections = @user.selections
   end
 
   # GET /selections/1

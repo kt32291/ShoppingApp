@@ -10,18 +10,25 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
+        <% if user_signed_in? %>
         <li class="active"><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
+        <% else %>
+        <li class="active"><%= link_to 'Sign In', new_user_session_path %>
+        <% end %>
         <li class="has-dropdown">
-          <a href="#">Account Details</a>
+        <% if user_signed_in? %>
+          <a href="#"><%= link_to 'Account Details', selections_url %>
+          <% end %>
           <ul class="dropdown">
             <li><a href="#">My Account</a></li>
           </ul>
         </li>
+        <li class="active"><i class="fa fa-shopping-cart"></i></li>
       </ul>
 
       <!-- Left Nav Section -->
       <ul class="left">
-        <li><a href="/store_front">Browse the Store</a></li>
+        <li><%= link_to 'Browse the Store', items_url %></li>
 
         <!-- Uncomment to include a search bar -->
         <!-- <li class="has-form">
@@ -34,7 +41,7 @@
             </div>
           </div>
         </li> -->
-        
+
       </ul>
     </section>
   </nav>
