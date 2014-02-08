@@ -1,3 +1,8 @@
+body {
+	background-image: url('squairy_light.png') !important;
+	// fuck foundation for making me have to use !important.
+}
+
 i {
 	color: white;
 	font-size: 25pt;
@@ -5,10 +10,45 @@ i {
 }
 
 .container {
-	width: 90%;
 	max-width: 960px;
 	margin: 0 auto;
 	height: 100%;
+}
+
+#columns {
+	-webkit-column-count: 4;
+	-webkit-column-gap: 2px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 4;
+	-moz-column-gap: 2px;
+	-moz-column-fill: auto;
+	column-count: 4;
+	column-gap: 2px;
+	column-fill: auto;
+}
+
+@media screen and (max-width: 960px) {
+	#columns {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}
+}
+
+@media screen and (max-width: 715px) {
+	#columns {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#columns {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
 }
 
 .form {
