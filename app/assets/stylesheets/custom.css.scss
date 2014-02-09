@@ -1,17 +1,95 @@
+
+
+body {
+	background-image: url('squairy_light.png') !important;
+	// fuck foundation for making me have to use !important.
+	text-align: center;
+}
+
+
+
+
+.nav-container {
+	max-width: 960px;
+	margin: 0px auto;
+	height: 100%;
+	margin-bottom: 40px;
+	margin-top: 25px;
+}
+
+#nav-columns {
+	-webkit-column-count: 4;
+	-webkit-column-gap: 15px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 4;
+	-moz-column-gap: 15px;
+	-moz-column-fill: auto;
+	column-count: 4;
+	column-gap: 15px;
+	column-fill: auto;
+}
+
+	.nav-item {
+		display: inline-block;
+		font-size: 12pt;
+		background: black;
+		color: white;
+		padding: 5px;
+		width: 100%
+
+	}
+
+
+
 .container {
-	width: 90%;
 	max-width: 960px;
 	margin: 0 auto;
 	height: 100%;
+}
+
+#columns {
+	-webkit-column-count: 4;
+	-webkit-column-gap: 15px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 4;
+	-moz-column-gap: 15px;
+	-moz-column-fill: auto;
+	column-count: 4;
+	column-gap: 15px;
+	column-fill: auto;
+}
+
+@media screen and (max-width: 960px) {
+	#columns {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}
+}
+
+@media screen and (max-width: 715px) {
+	#columns {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#columns {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
 }
 
 .form {
 
 	padding: 10px;
 	position: relative;
-	top: 100px;
-	width: 400px;
+	width: 465px;
 	margin: 0 auto;
+	background: white;
 	box-shadow: 0px 0px 4px black;
 	border-radius: 2px;
 }
@@ -31,10 +109,6 @@
 	}
 }
 
-.remember {
-	position: relative;
-	left: 200px;
-}
 
 .sign_in {
 		margin-left: 200px;
@@ -47,10 +121,23 @@
 	font-size: 10pt;
 }
 
-i {
-	color: darkgreen;
+#logo {
+	color: rgb(85,43,186);
 	width: 100%;
 	font-size: 50pt;
 	margin: 10px;
 	text-align: center;
+}
+
+.rockets {
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-bottom: 0px;
+	li {
+		display: inline-block;
+	}
+}
+
+.logo-name {
+	font-family: 'Frijole', cursive;
 }

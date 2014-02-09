@@ -1,15 +1,12 @@
 <div class="store-container">
+  <div id="columns">
     <% @items.each do |item| %>
     <div class="item-holder">
-      <div class="pic"><%= item.pic %></div><br>
-      <p class="name"><%= item.name %></p>
-      <p class="price"><%= item.price %></p>
-      <%= link_to 'Show', item %>
-      <%= link_to 'Edit', edit_item_path(item) %>
-      <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="pic"><%= link_to image_tag(item.pic), item %></div>
+      <p class="name"><%= link_to item.name, item %></p>
+      <p class="price"><i class="fa fa-money"></i> $<%= item.price %></p>
+      </div>
     <% end %>
-    </div>
-  </ul>
+</div>
 </div>
 
-<%= link_to 'New Item', new_item_path %>

@@ -1,24 +1,27 @@
-<h1>Listing selections</h1>
+<h1><%= current_user.first_name %>'s Kart</h1>
 
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Item</th>
       <th></th>
-      <th></th>
-      <th></th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Total</th>
     </tr>
   </thead>
 
   <tbody>
-    <% @selections.each do |selection| %>
+    <% item_ids = @selections.pluck(:item_id) %>
+    <% items_ids = item_ids.uniq %>
+<% items_ids.each do |one_item| %>
+<% item = Item.find_by(id: one_item) %>
       <tr>
-        <td><%= selection.user_id %></td>
-        <td><%= selection.item_id %></td>
-        <td><%= link_to 'Show', selection %></td>
-        <td><%= link_to 'Edit', edit_selection_path(selection) %></td>
-        <td><%= link_to 'Destroy', selection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to item.name, item_url(item.id) %></td>
+        <% id = item.id %>
+        <% multiples = Selection.where(item_id: id) %>
+        <td><%= multiples.count %></td>
+        <td>$<%= item.price %></td>
+        <td>$<%= item.price * multiples.count %></td>
       </tr>
     <% end %>
   </tbody>
