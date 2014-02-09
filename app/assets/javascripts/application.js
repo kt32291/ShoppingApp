@@ -17,4 +17,8 @@
 //= require_tree .
 //= require foundation
 
-$(document).foundation();
+// $(document).foundation();
+
+$(function() {
+	$('#draggable').draggable();
+});

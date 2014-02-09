@@ -6,8 +6,11 @@ body {
 	text-align: center;
 }
 
-
-
+#mycart {
+	&:hover {
+		
+	}
+}
 
 .nav-container {
 	max-width: 960px;
@@ -32,11 +35,15 @@ body {
 	.nav-item {
 		display: inline-block;
 		font-size: 12pt;
-		background: black;
-		color: white;
+		background: gray;
+		color: black !important;
 		padding: 5px;
-		width: 100%
+		width: 100%;
 
+		&:hover {
+			color: transparentize(blue, .4) !important;
+		}
+	
 	}
 
 

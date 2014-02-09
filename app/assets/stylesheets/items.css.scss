@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.mycart {
+	float: right;
+	min-height: 200px;
+	width: 150px;
+	background: white;
+	border: 1px solid black;
+	margin: 4px;
+
+	p {
+		width: 100%;
+		background: lightgray;
+	}
+}
+
 .item-holder {
 	margin: 0px;
 	margin-top: 15px;
@@ -11,11 +25,13 @@
 	background: white;
 	border-radius: 5px;
 	display: inline-block;
+
 	img {
 		width: 200px;
 		margin: 10px auto 0px auto;
 		border: 1px solid black;
 	}
+
 	p {
 		margin: 3px 15px;
 	}
@@ -24,7 +40,6 @@
 		background: lightblue;
 	}
 }
-
 
 .name {
 	float: left;
@@ -42,6 +57,59 @@
 	width: 960px;
 	margin: 0px auto;
 	text-align: center;
+}
+
+.detail {
+	position: absolute;
+	left: 100px;
+	margin: 10px;
+	width: 450px;
+	box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.8);
+	text-align: center;
+	background: white;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px;
+
+	img {
+		width: 200px;
+		float: left;
+		border: 1px solid black;
+	}
+
+	div {
+		margin: 3px 15px;
+	}
+
+	&:hover {
+		background: lightblue;
+	}
+
+	.det-name, .det-desc {
+		float: left;
+	}
+
+	.det-desc {
+		font-size: 9pt;
+	}
+
+	.det-price {
+		position: relative;
+		top: 0;
+	}
+
+	.cart {
+		position: absolute;
+		right: 120px;
+		bottom: 5px;
+		width: 100px;
+	}
+
+	.det-links {
+		position: absolute;
+		bottom: 5px;
+		right: 0;
+	}
 }
 
 @media screen and (max-width: 960px) {
