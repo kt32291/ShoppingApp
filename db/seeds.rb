@@ -121,6 +121,8 @@ items = [
 
 Item.destroy_all
 
+Selection.destroy_all
+
 items.each do |item|
   i = Item.new
   i.name = item[:name]

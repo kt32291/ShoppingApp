@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
 
     <title><%= content_for?(:title) ? yield(:title) : "Nerdz-R-Us" %></title>
 
@@ -13,7 +14,16 @@
   </head>
 
   <body>
-	
+    <ul class="rockets">
+  <li><i class="fa fa-rocket" id="logo"></i></li>
+  <li><i class="fa fa-rocket" id="logo"></i></li>
+  <li><i class="fa fa-rocket" id="logo"></i></li>
+  <li><i class="fa fa-rocket" id="logo"></i></li>
+  <li><i class="fa fa-rocket" id="logo"></i></li>
+  <li><i class="fa fa-rocket" id="logo"></i></li>
+</ul>
+  <h1 class="logo-name">Nerds 'R' Us</h1>
+
 	<%= render "layouts/header" %>
     <%= yield %>
     <%= javascript_include_tag "application" %>

@@ -1,34 +1,29 @@
-<div class="contain-to-grid">
-  <nav class="top-bar" data-topbar>
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="#">Nerdz 'R' Us</a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-    </ul>
+<div class="nav-container">
+  <div id="nav-columns">
 
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
+  <div class="hm">
         <% if user_signed_in? %>
-        <li class="active"><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete', :class => "nav-item" %>
         <% else %>
-        <li class="active"><%= link_to 'Sign In', new_user_session_path %>
+<%= link_to 'Sign In', new_user_session_path, :class => "nav-item" %>
         <% end %>
-        <li class="has-dropdown">
-        <% if user_signed_in? %>
-          <a href="#"><%= link_to 'Account Details', selections_url %>
-          <% end %>
-          <ul class="dropdown">
-            <li><a href="#">My Account</a></li>
-          </ul>
-        </li>
-        <li class="active"><i class="fa fa-shopping-cart"></i></li>
-      </ul>
 
+
+  </div>
+
+
+
+    <div><%= link_to 'Browse the Store', items_url, :class => "nav-item" %></div>
+
+
+
+  <div><%= link_to 'Account Details', selections_url, :class => "nav-item" %></div>
+
+   <div><%= link_to 'Contact', selections_url, :class => "nav-item" %></div>
+        <!-- <i class="fa fa-shopping-cart nav"></i> -->
+</div>
       <!-- Left Nav Section -->
-      <ul class="left">
-        <li><%= link_to 'Browse the Store', items_url %></li>
+</div>
 
         <!-- Uncomment to include a search bar -->
         <!-- <li class="has-form">
@@ -42,7 +37,4 @@
           </div>
         </li> -->
 
-      </ul>
-    </section>
-  </nav>
 </div>

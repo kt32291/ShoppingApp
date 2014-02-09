@@ -1,13 +1,45 @@
+
+
 body {
 	background-image: url('squairy_light.png') !important;
 	// fuck foundation for making me have to use !important.
+	text-align: center;
 }
 
-i {
-	color: white;
-	font-size: 25pt;
-	padding-top: 3px;
+
+
+
+.nav-container {
+	max-width: 960px;
+	margin: 0px auto;
+	height: 100%;
+	margin-bottom: 40px;
+	margin-top: 25px;
 }
+
+#nav-columns {
+	-webkit-column-count: 4;
+	-webkit-column-gap: 15px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 4;
+	-moz-column-gap: 15px;
+	-moz-column-fill: auto;
+	column-count: 4;
+	column-gap: 15px;
+	column-fill: auto;
+}
+
+	.nav-item {
+		display: inline-block;
+		font-size: 12pt;
+		background: black;
+		color: white;
+		padding: 5px;
+		width: 100%
+
+	}
+
+
 
 .container {
 	max-width: 960px;
@@ -17,13 +49,13 @@ i {
 
 #columns {
 	-webkit-column-count: 4;
-	-webkit-column-gap: 2px;
+	-webkit-column-gap: 15px;
 	-webkit-column-fill: auto;
 	-moz-column-count: 4;
-	-moz-column-gap: 2px;
+	-moz-column-gap: 15px;
 	-moz-column-fill: auto;
 	column-count: 4;
-	column-gap: 2px;
+	column-gap: 15px;
 	column-fill: auto;
 }
 
@@ -55,9 +87,9 @@ i {
 
 	padding: 10px;
 	position: relative;
-	top: 100px;
-	width: 400px;
+	width: 465px;
 	margin: 0 auto;
+	background: white;
 	box-shadow: 0px 0px 4px black;
 	border-radius: 2px;
 }
@@ -77,10 +109,6 @@ i {
 	}
 }
 
-.remember {
-	position: relative;
-	left: 200px;
-}
 
 .sign_in {
 		margin-left: 200px;
@@ -94,9 +122,22 @@ i {
 }
 
 #logo {
-	color: darkgreen;
+	color: rgb(85,43,186);
 	width: 100%;
 	font-size: 50pt;
 	margin: 10px;
 	text-align: center;
+}
+
+.rockets {
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-bottom: 0px;
+	li {
+		display: inline-block;
+	}
+}
+
+.logo-name {
+	font-family: 'Frijole', cursive;
 }
