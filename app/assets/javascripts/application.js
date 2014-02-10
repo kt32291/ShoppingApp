@@ -20,5 +20,6 @@
 // $(document).foundation();
 
 $(function() {
+	//$('#mycart').droppable();
 	$('#draggable').draggable();
 });

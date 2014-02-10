@@ -5,7 +5,7 @@
 .mycart {
 	float: right;
 	min-height: 200px;
-	width: 150px;
+	width: 200px;
 	background: white;
 	border: 1px solid black;
 	margin: 4px;
@@ -85,17 +85,26 @@
 		background: lightblue;
 	}
 
-	.det-name, .det-desc {
+	.deets {
+		float: right;
+		width: 200px;
+		text-align: left;
+	}
+
+	.det-name {
+		width: 50%;
 		float: left;
 	}
 
 	.det-desc {
 		font-size: 9pt;
+		float: left;
+		width: 100%;
 	}
 
 	.det-price {
-		position: relative;
-		top: 0;
+		float: right;
+		top: -20px;
 	}
 
 	.cart {

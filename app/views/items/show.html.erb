@@ -6,24 +6,24 @@
 <div class="detail">
 
 	<%= image_tag(@item.pic) %>
-
-	<div class="det-name"><%= @item.name %>
-	</div>
-
-	<div class="det-desc"><%= @item.desc %>
-	</div>
-
-
-	<div class="det-price"><%= @item.price %>
-	</div>
 	
+	<div class="deets">
+		<div class="det-name"><%= @item.name %>
+		</div>
 
-	<div class="cart">
-		<%= link_to 'Add to Cart', new_selection_url(item_id: @item.id) %>
+		<div class="det-price"><%= @item.price %>
+		</div>
+
+		<div class="det-desc"><%= @item.desc %>
+		</div>
+
+		<div class="cart">
+			<%= link_to 'Add to Cart', new_selection_url(item_id: @item.id) %>
+		</div>
+
+		<div class = "det-links">
+			<%= link_to 'Edit', edit_item_path(@item) %> |
+			<%= link_to 'Back', items_path %>
+		</div>
 	</div>
-
-	<div class = "det-links">
-		<%= link_to 'Edit', edit_item_path(@item) %> |
-		<%= link_to 'Back', items_path %>
-	</div> 
 </div>

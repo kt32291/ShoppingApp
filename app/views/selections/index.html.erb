@@ -1,12 +1,11 @@
-<h1><%= current_user.first_name %>'s Kart</h1>
+<h1><%= current_user.first_name %>'s Cart</h1>
 
 <table>
   <thead>
     <tr>
       <th></th>
       <th>Quantity</th>
-      <th>Price</th>
-      <th>Total</th>
+      <th>Cost</th>
     </tr>
   </thead>
 
@@ -20,13 +19,25 @@
         <% id = item.id %>
         <% multiples = Selection.where(item_id: id) %>
         <td><%= multiples.count %></td>
-        <td>$<%= item.price %></td>
         <td>$<%= item.price * multiples.count %></td>
       </tr>
     <% end %>
+    <tr>
+      <td>
+      </td>
+      <td>
+        Total:
+      </td>
+      <td>
+        <% items_ids.each do |one_item| %>
+        <% item = Item.find_by(id: one_item) %>
+        <% id = item.id %>
+        <% multiples = Selection.where(item_id: id) %>
+        <%= item.price * multiples.count %>
+        <% end %>
+      </td>
+    </tr>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Selection', new_selection_path %>

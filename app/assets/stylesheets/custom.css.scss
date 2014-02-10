@@ -18,6 +18,7 @@ body {
 	height: 100%;
 	margin-bottom: 40px;
 	margin-top: 25px;
+	min-width: 600px;
 }
 
 #nav-columns {
@@ -143,8 +144,23 @@ body {
 	li {
 		display: inline-block;
 	}
+	min-width: 550px;
 }
 
 .logo-name {
 	font-family: 'Frijole', cursive;
+}
+
+@media screen and (max-width: 775px) {
+	.detail {
+		position: absolute !important;
+		left: 0  !important;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.nav-container {
+		width: 320px;
+		min-width: 0;
+	}
 }

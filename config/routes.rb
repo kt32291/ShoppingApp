@@ -5,6 +5,8 @@ ShoppingApp::Application.routes.draw do
   resources :items
   resources :users, :only => [:show]
 
+  get 'selections#show' => redirect('items#index')
+
   root 'items#index'
 
 
