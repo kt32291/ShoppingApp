@@ -16,6 +16,22 @@
 	}
 }
 
+.cart {
+	background: lightgreen;
+	height: 80px;
+	padding-top: 8px;
+	border: 2px dashed green;
+	&.hover {
+		border: 2px solid green;
+	}
+}
+
+.notice {
+	color: red;
+	display: none;
+	padding-top: 5px;
+}
+
 .item-holder {
 	margin: 0px;
 	margin-top: 15px;

@@ -22,6 +22,13 @@ $(function() {
   $('.item-holder').draggable({
       stack: ".draggable",
       helper: 'clone'
-
     });
+
+  $('.cart').droppable({
+    hoverClass: "hover",
+    tolerance: "touch",
+    drop: function() {
+        $(this).next("p").fadeIn().fadeOut( 1000 );
+    }
+  })
 });
