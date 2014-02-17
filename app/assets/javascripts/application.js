@@ -12,14 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
+//= require jquery.ui.all
 //= require turbolinks
 //= require_tree .
-//= require foundation
 
-// $(document).foundation();
+
 
 $(function() {
-	//$('#mycart').droppable();
-	$('#draggable').draggable();
+  $('.item-holder').draggable({
+      stack: ".draggable",
+      helper: 'clone'
+
+    });
 });
