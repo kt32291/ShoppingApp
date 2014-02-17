@@ -18,6 +18,8 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+
+
   # GET /items/1/edit
   def edit
   end

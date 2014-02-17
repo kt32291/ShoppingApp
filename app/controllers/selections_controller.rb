@@ -26,18 +26,17 @@ class SelectionsController < ApplicationController
   # POST /selections
   # POST /selections.json
   def create
-    @selection = Selection.new(selection_params)
 
-    respond_to do |format|
-      if @selection.save
-        format.html { redirect_to @selection, notice: 'Selection was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @selection }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @selection.errors, status: :unprocessable_entity }
-      end
-    end
+respond_to do |format|
+  format.json do
+    @selection = Selection.new
+    @selection.user_id = current_user.id
+    @selection.item_id = params[:item_id]
+    @selection.save
   end
+end
+end
+
 
   # PATCH/PUT /selections/1
   # PATCH/PUT /selections/1.json

@@ -27,7 +27,13 @@ $(function() {
   $('.cart').droppable({
     hoverClass: "hover",
     tolerance: "touch",
-    drop: function() {
+    drop: function(event, ui) {
+        var item_id = ui.draggable.attr('id');
+        console.log(item_id);
+        $.post("/selections/new",
+        {
+          item_id: item_id
+        });
         $(this).next("p").fadeIn().fadeOut( 1000 );
     }
   })
